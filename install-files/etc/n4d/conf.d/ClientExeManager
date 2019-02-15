@@ -1,0 +1,7 @@
+[SETUP]
+type=python
+path=ClientExeManager.py
+class=ClientExeManager
+[METHODS]
+get_available_oneshots=anonymous
+get_boot_scripts=anonymous
