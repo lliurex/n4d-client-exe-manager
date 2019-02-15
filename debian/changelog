@@ -1,3 +1,9 @@
+n4d-client-exe-manager (0.4.11) bionic; urgency=medium
+
+  * Initial release for bionic
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 15 Feb 2019 10:12:31 +0100
+
 n4d-client-exe-manager (0.4.1) xenial; urgency=high
 
   * First xenial release
