@@ -1,0 +1,15 @@
+{
+	"SETUP":{
+		"type":"python",
+		"path":"ClientExeManager.py",
+		"class":"ClientExeManager"
+	},
+	"METHODS":{
+		"get_available_oneshots":{
+			"allowed_groups": ["anonymous"]
+		},
+		"get_boot_scripts":{
+			"allowed_groups": ["anonymous"]
+		}
+	}
+}	

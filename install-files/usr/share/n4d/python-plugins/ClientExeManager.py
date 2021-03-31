@@ -7,6 +7,10 @@ import netifaces
 import pyinotify
 from pyinotify import WatchManager, Notifier, ThreadedNotifier, EventsCodes, ProcessEvent
 
+import glob
+import threading
+import n4d.responses
+
 class ClientExeManager:
 	
 	ONESHOT_SCRIPTS_PATH="/usr/share/n4d-client-exe-manager/one-shots/"
@@ -36,9 +40,10 @@ class ClientExeManager:
 				if info[netifaces.AF_INET][0]["addr"]==ip:
 					return info[netifaces.AF_LINK][0]["addr"]
 			except Exception as e:
-				print e
+				print(str(e))
 				
 		return None
+	
 		
 	#def get_mac_from_ip
 
@@ -56,7 +61,7 @@ class ClientExeManager:
 					m.update(data)
 				return m.hexdigest()
 		except Exception as e:
-			print e
+			print(str(e))
 			return "MD5SUM-ERROR-"+str(random.random())
 		
 	#def md5sum
@@ -124,7 +129,7 @@ class ClientExeManager:
 				
 			except Exception as e:
 				notifier.stop()
-				print e
+				print(str(e))
 				
 	
 	#def _inotify
@@ -146,7 +151,8 @@ class ClientExeManager:
 				f.close()
 				ret.append((item,content))
 				
-		return ret
+		#Old n4d:return ret
+		return n4d.responses.build_successful_call_response(ret)
 	
 	#def get_available_oneshots
 	
@@ -164,7 +170,7 @@ class ClientExeManager:
 		if mac!=None:
 			
 			mac=mac.replace(":","").lower()
-			print mac
+			print(mac)
 			if os.path.exists(ClientExeManager.BOOT_SCRIPTS+mac):
 				for item in glob.glob(ClientExeManager.BOOT_SCRIPTS+mac+"/*"):
 					if os.path.isfile(item):
@@ -172,7 +178,8 @@ class ClientExeManager:
 						ret.append(f.readlines())
 						f.close()
 		
-		return {"status":True,"data":ret}
+		#Old n4d:return {"status":True,"data":ret}
+		return n4d.responses.build_successful_call_response(ret)
 		
 		
 	#def get_boot_scripts
@@ -184,4 +191,4 @@ if __name__=="__main__":
 	
 	cem=ClientExeManager()
 	cem.startup(None)
-	print cem.get_available_oneshots(["159d56c4e63112c39b3309e709a4d0ee"])
+	print(cem.get_available_oneshots(["159d56c4e63112c39b3309e709a4d0ee"]).get('return',None))
