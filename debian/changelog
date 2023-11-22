@@ -1,0 +1,59 @@
+n4d-client-exe-manager (0.5.11) focal; urgency=medium
+
+  * Initial release for focal
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 31 Mar 2021 11:15:24 +0200
+
+n4d-client-exe-manager (0.4.11) bionic; urgency=medium
+
+  * Initial release for bionic
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 15 Feb 2019 10:12:31 +0100
+
+n4d-client-exe-manager (0.4.1) xenial; urgency=high
+
+  * First xenial release
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 29 Mar 2016 12:48:54 +0200
+
+n4d-client-exe-manager (0.4) trusty; urgency=high
+
+  * Adding boot-scripts that are always executed
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 28 Jan 2016 11:38:38 +0100
+
+n4d-client-exe-manager (0.3.3) trusty; urgency=high
+
+  * Added IN_MODIFY signal as well
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Wed, 16 Sep 2015 16:46:09 +0200
+
+n4d-client-exe-manager (0.3.2) trusty; urgency=high
+
+  * Added inotify to watch executables directory
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Wed, 16 Sep 2015 16:41:14 +0200
+
+n4d-client-exe-manager (0.3.1) trusty; urgency=high
+
+  * First ... working... release
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Wed, 16 Sep 2015 15:20:35 +0200
+
+n4d-client-exe-manager (0.3) trusty; urgency=medium
+
+  * first trusty release
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Thu, 15 Jan 2015 12:22:56 +0100
+
+n4d-client-exe-manager (0.2) precise; urgency=low
+
+  * UNRELEASED
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Fri, 25 Oct 2013 10:22:18 +0200
+
+n4d-client-exe-manager (0.1) precise; urgency=low
+
+  * First release
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 22 Oct 2013 08:48:02 +0200
